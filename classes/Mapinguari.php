@@ -8,7 +8,7 @@ class Mapinguari extends ClasseGenerica {
     public $velocidade = 25;
     public $inteligencia = 30;
     public $vida = 97;
-    public $img = 'mapinguari.jpg';
+    public $img = 'mapinguari';
     public $descricao = 'Gigante humanoide peludo, com um olho só no centro da testa, braços longos e garras, boca na barriga.';
 
     public function ataqueEspecial(){

@@ -5,7 +5,7 @@ require_once("classes/CorpoSeco.php");
 require_once("classes/Lobisomem.php");
 require_once("classes/Saci.php");
 require_once("classes/Mula.php");
-require_once("classes/MatindaPereira.php");
+require_once("classes/Mapinguari.php");
 require_once("classes/MatindaPereira.php");
 
 
@@ -88,7 +88,7 @@ $personagem->classe = $classe;
                                         <div style="display:flex;">
                                             <p style="margin: 0px;"><?php echo "<strong>Classe:</strong> {$personagem->__get('classe')}"; ?></p>
                                         </div>
-                                        <img src="sources/<?php echo $personagem->__get('img'); ?>.png" style="padding-bottom: 15px; height:210px;" alt="Ícone de usuário">
+                                        <img src="imagem/<?php echo $personagem->__get('img'); ?>.png" style="padding-bottom: 15px; height:210px;" alt="Ícone de usuário">
                                     </div>
 
 

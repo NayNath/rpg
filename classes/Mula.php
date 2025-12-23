@@ -8,7 +8,7 @@ class Mula extends ClasseGenerica {
     public $velocidade = 95;
     public $inteligencia = 100;
     public $vida = 79;
-    public $img = 'mula.jpg';
+    public $img = "mula";
     public $descricao = 'Mulher amaldiçoada que se transforma em uma mula escura (marrom ou preta) com uma bola de fogo no lugar da cabeça.';
 
     public function ataqueEspecial(){
