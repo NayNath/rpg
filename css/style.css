@@ -1,0 +1,9 @@
+body{
+    background-repeat: no-repeat;
+    background-image: url(./../imagem/cemiterio.jpg);
+    background-size: cover;
+}
+
+.formulario{
+    background-color: black;
+}
