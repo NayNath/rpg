@@ -1,5 +1,5 @@
 <?php
-
+require_once("conexao/conexao.php");
 require_once("classes/ClasseGenerica.php");
 require_once("classes/CorpoSeco.php");
 require_once("classes/Lobisomem.php");
@@ -9,8 +9,27 @@ require_once("classes/Mapinguari.php");
 require_once("classes/MatindaPereira.php");
 
 
-$nome = $_GET["nome"];
-$classe = $_GET["classe"];
+$nome = $_POST["nome"];
+$classe = $_POST["classe"];
+
+try{
+    $pdo->beginTransaction();
+
+    $stmt = $pdo->prepare("INSERT INTO usuario(nomeUsuario,classe)
+    VALUES (:nomeUsuario,:classe)");
+
+    $stmt->execute([':nomeUsuario' => $nome,
+                        ':classe' => $classe]);
+
+    if(!$stmt->rowCount()){
+        throw new Exception("Erro ao inserir em pessoas");}
+    
+        $pdo->commit();
+
+} catch (Exception $e) {
+    $pdo->rollBack();
+    echo $e->getMessage();
+}
 
 $personagem = "";
 
